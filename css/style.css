@@ -59,5 +59,6 @@ body{
 
     .button-33 {
       margin: 5px 4px 6px 5px;
+      text-decoration: none;
     }
 }
