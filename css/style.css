@@ -3,7 +3,7 @@
     font-family: 'Poppins',cursive;
 }
 body{
-    color: azure;
+    color: #759ff8;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -19,24 +19,15 @@ body{
 
 @keyframes glow{
     100%{
-        color: #fff;
+        color: #759ff8;
         text-shadow: 0 0 5px #759ff8, 0 0 50px #759ff8, 0 0 100px #759ff8;
     }
-    100%{
-        color: #111;
-        text-shadow: none;
-    }
-}
-
-.description{
-    font-size: 1rem;
-    margin-bottom: 20px;
 }
 
 .button-33 {
     background-color: #a3d6ff;
     border-radius: 100px;
-    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    box-shadow: rgba(44, 168, 187, 0.2) 0 -25px 18px -14px inset,rgba(44, 168, 187, 0.2) 0 1px 2px,rgba(44, 168, 187, 0.2) 0 2px 4px,rgba(44, 168, 187, 0.2) 0 4px 8px,rgba(44, 168, 187, 0.2) 0 8px 16px,rgba(44, 168, 187, 0.2) 0 16px 32px;
     color: #4baeff;
     cursor: pointer;
     display: inline-block;
@@ -46,7 +37,7 @@ body{
     text-decoration: none;
     transition: all 250ms;
     border: 0;
-    font-size: 16px;
+    font-size: 13px;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
@@ -63,14 +54,9 @@ body{
         font-size: 1.8rem;
         font-weight: 600;
         text-align: center;
+        margin-bottom: 50px;
     }
-    .description{
-        font-size: 5px;
-    }
-    
-    .button a{
-        font-size: 10px;
-    }
+
     .button {
       margin: 5px 4px 6px 5px;
     }
