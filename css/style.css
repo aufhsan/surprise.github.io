@@ -1,9 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
-*{
-    font-family: 'Poppins',cursive;
-}
+  /*greetings*/
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet');
+  *{
+      font-family: "Kalam", cursive;
+      font-weight: 700;
+      font-style: normal;
+  }
+
 body{
-    color: #759ff8;
+    color: #000;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -11,41 +15,123 @@ body{
     align-items: center;
     justify-content: center;
     background-color: black;
-}
+  }
+
 .greetings{
-    font-size: 2rem;
+    font-size: 3.5rem;
     font-weight: 600;
+    /*animasi*/
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-name: glow;
+    animation-delay: 4s;
+    animation-duration: 5s;
+}
+
+.greetings > span{
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-name: warnagreetings, glow;
+    animation-delay: 2s, 3.5s;
+    animation-duration: 1.5s, 2.5s;
+}
+
+@keyframes warnagreetings{
+  0% {
+    color: #000;
+  }
+  100%{
+    color: #f9afa6;
+  }
 }
 
 @keyframes glow{
-    100%{
-        color: #759ff8;
-        text-shadow: 0 0 5px #759ff8, 0 0 50px #759ff8, 0 0 100px #759ff8;
-    }
+  from {
+    color: #f9afa6;
+    text-shadow: 0 0 0px #000000, 0 0 0px #000000, 0 0 0px #000000;
+  }
+  to{
+    color: #ffcdc6;
+    text-shadow: 0 0 12px rgb(222, 173, 166), 0 0 50px #deada6, 0 0 100px #deada6;
+  }
 }
 
 .button-33 {
-    background-color: #a3d6ff;
+    background-color: #000000;
     border-radius: 100px;
-    box-shadow: rgba(44, 168, 187, 0.2) 0 -25px 18px -14px inset,rgba(44, 168, 187, 0.2) 0 1px 2px,rgba(44, 168, 187, 0.2) 0 2px 4px,rgba(44, 168, 187, 0.2) 0 4px 8px,rgba(44, 168, 187, 0.2) 0 8px 16px,rgba(44, 168, 187, 0.2) 0 16px 32px;
-    color: #30baff;
     cursor: pointer;
     display: inline-block;
     font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
-    padding: 7px 20px;
+    padding: 12px 20px;
     text-align: center;
     text-decoration: none;
-    transition: all 250ms;
     border: 0;
-    font-size: 16px;
+    font-size: 20px;
     user-select: none;
-    -webkit-user-select: none;
     touch-action: manipulation;
+    /*animasi*/
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-name: warnabutton, warnashadow;
+    animation-delay: 3s, 3s;
+    animation-duration: 2s, 1.5s;
+  }
+
+  .text {
+    text-decoration: none;
+    color: #000000;
+    /*animasi*/
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-name: warnatextawal, warnatext;
+    animation-delay: 3s, 4s;
+    animation-duration: 2s, 2s;
+  }
+
+  @keyframes warnatextawal{
+    from {
+      color: #000000;
+    }
+    to{
+      color: #ffcdc6;
+    }
+  }
+  @keyframes warnatext{
+    to{
+      color: #ca9189;
+    }
+  }
+
+  @keyframes text{
+    from {
+      color: #000;
+    }
+    to{
+      background-color: #fdd5cf;
+    }
+  }
+
+  @keyframes warnabutton{
+    from {
+      color: #000000;
+    }
+    to{
+      background-color: #ffd9d4;
+    }
+  }
+
+  @keyframes warnashadow{
+    from {
+      box-shadow: rgb(0, 0, 0) 0 -25px 18px -14px inset,rgb(0, 0, 0) 0 1px 2px,rgb(0, 0, 0) 0 2px 4px,rgba(0, 0, 0) 0 4px 8px,rgba(0, 0, 0) 0 8px 16px,rgb(0, 0, 0) 0 16px 32px;
+    }
+    to{
+      box-shadow: rgb(255, 191, 182, 0.2) 0 -25px 18px -14px inset,rgb(255, 191, 182, 0.2) 0 1px 2px,rgb(255, 191, 182, 0.2) 0 2px 4px,rgb(255, 191, 182, 0.2) 0 4px 8px,rgb(255, 191, 182, 0.2) 0 8px 16px,rgb(255, 191, 182, 0.2) 0 16px 32px;
+    }
   }
   
   .button-33:hover {
-    box-shadow: rgba(0, 204, 255, 0.35) 0 -25px 18px -14px inset,rgba(0, 204, 255, 0.35) 0 1px 2px,rgba(0, 204, 255, 0.35) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(0, 204, 255, 0.35) 0 16px 32px;
-    transform: scale(1.05) rotate(-1deg);
+    box-shadow: rgb(255, 191, 182, 0.35), 0 -25px 18px -14px inset,rgb(255, 191, 182, 0.35) 0 1px 2px,rgb(255, 191, 182, 0.35) 0 2px 4px,rgb(255, 191, 182,.25) 0 4px 8px,rgb(255, 191, 182,.25) 0 8px 16px,rgb(255, 191, 182, 0.35) 0 16px 32px;
+    transform: scale(1.05) rotate(-0.3deg);
   }
 
 @media screen and (max-width:574px){
@@ -54,11 +140,16 @@ body{
         font-size: 1.8rem;
         font-weight: 600;
         text-align: center;
-        margin-bottom: 1000px;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+        animation-name: warna, glow;
+        animation-delay: 2s, 4s;
+        animation-duration: 1.5s, 5s;
     }
 
     .button-33 {
       margin: 5px 4px 6px 5px;
       text-decoration: none;
     }
+    
 }

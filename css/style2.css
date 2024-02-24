@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      /*code animasi */
+    animation-fill-mode: forwards;
+    animation-name: bgopacity;
+    animation-delay: 0s;
+    animation-duration: 5s;
+}
+
+@keyframes bgopacity {
+  0% { background-color: #000000; }
+  100% { background-color: #ffeeee; }
+}
+
+.wrapper{
+    position: relative;
+    width: 25rem;
+    height: 12rem;
+    border-bottom: 1.5rem solid transparent;
+}
+
+/*bayangan amplop*/
+.env{
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    z-index: -1;
+    position: absolute;
+    box-shadow: 10px 35px 25px #c7935378;
+      /*code animasi */
+  animation-fill-mode: forwards;
+  animation-name: turun;
+  animation-delay: 6.8s;
+  animation-duration: 2s;
+}
+
+/*tutup amplop*/
+.tutupenv{
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 6;
+    background: linear-gradient(-120deg,
+    #fbb6b6,
+    #fdd2d6);
+    clip-path: polygon(0% 0%,50% 70%,100% 0%);
+    transform-origin: top;
+    /*code animasi */
+    animation-fill-mode: forwards;
+      animation-name: buka, turunenv;
+      animation-delay: 3.3s, 6.8s;
+      animation-duration: 2s, 2s;
+  }
+
+@keyframes turunenv {
+    to {  transform: translate(0rem, 30rem);
+        z-index: 6;}
+  }
+
+@keyframes buka {
+    to { transform: rotateX(180deg) translateY(-.11rem);
+        z-index: -1;
+        background: linear-gradient(45deg,#fdd2d6,#fbb6b6);
+    }
+}
+
+/*amplop bagian belakang*/
+.belakangenv{
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: #ff9494;
+  /*code animasi */
+  animation-fill-mode: forwards;
+  animation-name: turun;
+  animation-delay: 6.8s;
+  animation-duration: 2s;
+}
+
+/*amplop bagian depan*/
+.front{
+    position: absolute;
+  width:0;
+  height:0;
+  border-right: 200px solid #fbd2d2;
+  border-top: 113px solid transparent;
+  border-bottom: 90px solid transparent;
+  top: 0px;
+  left: 200px;
+  z-index: 1;
+        /*code animasi */
+      animation-fill-mode: forwards;
+        animation-name: turun;
+        animation-delay: 6.8s;
+        animation-duration: 2s;
+}
+
+@keyframes turun {
+  to { transform: translate(0rem, 30rem); }
+}
+
+.front::before{
+    content:"";
+    position: absolute;
+    width:0;
+    height:0;
+    border-left: 200px solid #fbd2d2;
+    border-top: 113px solid transparent;
+    border-bottom: 90px solid transparent;
+    top: -113px;
+    left:-200px;
+}
+.front::after{
+    width:0;
+    height:0;
+    position: absolute;
+    content:"";
+    border-bottom: 150px solid #fce7e9;
+    border-right:200px solid transparent;
+    border-left: 200px solid transparent;
+    top: -60px;
+    left: -200px;
+}
+
+
+img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6rem;
+  transform-origin: top;
+  transform: translate(-50%,-20%);
+  animation: heart 1s forwards 1s;
+}
+
+.lettre{
+    /*code background */
+    position: absolute;
+    z-index: 1;
+        background:  #eff;
+        height: 95%;
+        width: 90%;
+        margin: 5%;
+    /*code text */
+        font-size: 1.5rem;
+        color: #bd0707;
+        font-family: 'Pacifico', cursive;
+        text-align: center;
+        padding-top: 2rem;
+    /*code animasi */
+    animation-fill-mode: forwards;
+    animation-name: naik, zoom, geseratas;
+    animation-delay: 5s, 7s, 8.5s;
+    animation-duration: 1s, 2s, 1.5s;
+}
+
+.lettre2{
+     /*code background */
+     position: absolute;
+     z-index: 0;
+         background: rgb(185, 185, 185);
+         height: 95%;
+         width: 90%;
+         margin: 5%;
+     /*code animasi */
+     animation-fill-mode: forwards;
+     animation-name: naik, zoom, geseratas, buka2;
+     animation-delay: 5s, 7s, 8.5s, 10s;
+     animation-duration: 1s, 2s, 1.5s, 2s;
+}
+
+@keyframes buka2 {
+  to { transform: translate(0%,30%) scale(1.6);
+      background:#eff;
+  }
+}
+.lattrejudul {
+  font-size: 0.8rem;
+  color: #000000;
+  font-family: "Bad Script", cursive;
+  font-weight: bold;
+  text-align: justify;
+  position: absolute;
+  top: -2.5%;
+  left: 5%;
+  width: 5rem;
+}
+
+.lattrebawah {
+    font-size: 0.7rem;
+    color: #000000;
+    font-family: "Bad Script", cursive;
+    line-height: 15.4px;
+    text-align: justify;
+    position: absolute;
+    top: 12.5%;
+    left: 5%;
+    width: 20rem;
+}
+
+.lettre3{
+  /*code background */
+  position: absolute;
+  z-index: -1;
+      background: rgb(185, 185, 185);
+      height: 41%;
+      width: 90%;
+      margin: 5%;
+  /*code animasi */
+  animation-fill-mode: forwards;
+  animation-name: naik, zoom, geseratas, buka2, buka3;
+  animation-delay: 5s, 7s, 8.5s, 10s, 11.5s;
+  animation-duration: 1s, 2s, 1.5s, 2s, 2s;
+}
+
+@keyframes buka2 {
+to { transform: translate(0%,30%) scale(1.6);
+   background:#eff;
+}
+}
+
+@keyframes buka3 {
+  to { transform: translate(0%,400%) scale(1.6);
+     background:#eff;
+  }
+  }
+
+.lattrebawah2 {
+ font-size: 0.7rem;
+ color: #000000;
+ font-family: "Bad Script", cursive;
+ line-height: 15.4px;
+ text-align: justify;
+ position: absolute;
+ top: 1%;
+ left: 5%;
+ width: 20rem;
+}
+
+
+@keyframes geseratas {
+  to { transform: translate(0%,-130%) scale(1.6);}
+}
+@keyframes zoom {
+  to { transform: scale(1.6);}
+}
+@keyframes naik {
+    to { transform: translate(0rem, -4.5rem); }
+}
+
+@keyframes heart {
+    100%{transform: translate(-50%,-30%) scaleX(0);}
+}
